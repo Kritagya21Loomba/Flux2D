@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flux2D Sandbox</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="app">
+        <div id="toolbar">
+            <span id="title">Flux2D</span>
+            <button id="btn-pause">▶ Pause</button>
+            <button id="btn-step">Step</button>
+            <button id="btn-clear">Clear</button>
+            <div class="toolbar-group">
+                <label>Template:</label>
+                <select id="template-select">
+                    <option value="">-- Load Template --</option>
+                </select>
+            </div>
+            <div class="toolbar-group">
+                <label>Speed:</label>
+                <input type="range" id="speed-slider" min="1" max="8" value="1">
+                <span id="speed-label">1x</span>
+            </div>
+            <div class="toolbar-group">
+                <span>FPS: <span id="fps">0</span></span>
+                <span>Particles: <span id="particle-count">0</span></span>
+            </div>
+        </div>
+        <div id="main">
+            <canvas id="simCanvas"></canvas>
+            <div id="ui-panel">
+                <div id="element-picker"></div>
+                <div id="brush-controls">
+                    <label>Brush Size:</label>
+                    <input type="range" id="brush-slider" min="1" max="20" value="3">
+                    <span id="brush-label">3</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
